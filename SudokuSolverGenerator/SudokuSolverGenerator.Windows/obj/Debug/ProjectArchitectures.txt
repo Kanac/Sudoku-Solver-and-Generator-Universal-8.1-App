@@ -1,0 +1,1 @@
+C:\Users\Anthony\documents\visual studio 2013\Projects\SudokuSolverGenerator\SudokuSolverGenerator\SudokuSolverGenerator.Windows\SudokuSolverGenerator.Windows.csproj;neutral
