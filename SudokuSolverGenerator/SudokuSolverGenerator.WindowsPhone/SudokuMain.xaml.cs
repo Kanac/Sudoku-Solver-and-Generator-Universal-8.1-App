@@ -29,7 +29,6 @@ namespace SudokuSolverGenerator
     
     public sealed partial class SudokuMain : Page
     {
-        private const string VALUESFILE = "values.json";
         private int _selectedIndex = -1;
         private Random rand = new Random();
         private List<Border> _borders;
@@ -61,14 +60,7 @@ namespace SudokuSolverGenerator
             // this event is handled for you.
             Create_Cells();
             Create_Boxes();
-            try
-            {
-                Create_Sudoku((int)e.Parameter);
-            }
-            catch
-            {
-                Create_Sudoku(30);
-            }
+            Create_Sudoku(30);
         }
 
         private void Create_Sudoku(int numCells)
@@ -156,15 +148,15 @@ namespace SudokuSolverGenerator
                     _borders[_selectedIndex].Background.ClearValue(SolidColorBrush.ColorProperty);
 
                 else if ((_values[_selectedIndex].Text.Count() == 1))
-                    _values[_selectedIndex].Foreground = new SolidColorBrush(Colors.White);
+                    _values[_selectedIndex].Foreground = new SolidColorBrush(Colors.White);         //Leave cells with the font that marks multiple values 
                 else
                     _values[_selectedIndex].Foreground = new SolidColorBrush(Colors.Gold);
             }
 
             //Current selection algorithim
-            _selectedIndex = newIndex;     
+            _selectedIndex = newIndex;
 
-            if (_values[_selectedIndex].Text.Any())        
+            if (_values[_selectedIndex].Text.Any())
                 _values[_selectedIndex].Foreground = new SolidColorBrush(Colors.ForestGreen);
             else
                 _borders[_selectedIndex].Background = new SolidColorBrush(Colors.ForestGreen);
@@ -173,14 +165,18 @@ namespace SudokuSolverGenerator
 
         private void Value_Tapped(object sender, TappedRoutedEventArgs e)
         {
-            if (_selectedIndex == -1)     
+            if (_selectedIndex == -1)
                 return;
 
             var valueChoice = (TextBlock)sender;
 
-            _borders[_selectedIndex].Background.ClearValue(SolidColorBrush.ColorProperty);      //Remove highlight background if any
+            _borders[_selectedIndex].Background.ClearValue(SolidColorBrush.ColorProperty);      //Remove background highlight if any, since this cell is going to have at least 1 value, which will be highlighted instead
 
-            if (!(_values[_selectedIndex].Text.Contains(valueChoice.Text)))         //Algorithm to manage values in a cell
+            if ((_values[_selectedIndex].Text.Length == 0))
+            {
+                _values[_selectedIndex].Text = valueChoice.Text;
+            }
+            else if (!(_values[_selectedIndex].Text.Contains(valueChoice.Text)))         //Algorithm to manage values in a cell
             {
                 var cellValues = _values[_selectedIndex].Text + valueChoice.Text;
                 var charValues = cellValues.ToCharArray();
@@ -188,23 +184,17 @@ namespace SudokuSolverGenerator
                 _values[_selectedIndex].Text = "";
 
                 foreach (var a in charValues)
-                {
                     _values[_selectedIndex].Text += a;
-                }
+
             }
 
-            if (_values[_selectedIndex].Text.Length == 1)
-                _values[_selectedIndex].Foreground = new SolidColorBrush(Colors.ForestGreen);       //Highlight foreground if assigned, otherwise background will cover number
-            else
-                _values[_selectedIndex].Foreground = new SolidColorBrush(Colors.Gold);          //To indicate multiple candidates 
+            _values[_selectedIndex].Foreground = new SolidColorBrush(Colors.ForestGreen);
 
-            if (_values.Where(c => c.Text.Any()).Count() == 81)         //Check if placement solves puzzle        
+            if (_values.Select(c => c.Text).SequenceEqual(puzzle.SolvedCells[0].Select(c => c[0].ToString())))
             {
-                if (_values.Select(c => c.Text).SequenceEqual(puzzle.SolvedCells[0].Select(c => c[0].ToString())))
-                {
-                    VictoryMP3.Play();
-                }
+                VictoryMP3.Play();
             }
+
 
         }
 
@@ -238,9 +228,25 @@ namespace SudokuSolverGenerator
             _values[cell].Text = puzzle.SolvedCells[0][cell][0].ToString();
         }
 
+        private void ClearGrid()
+        {
+            foreach (var val in _values)
+            {
+                val.Foreground = new SolidColorBrush(Colors.White);
+                val.Text = "";
+            }
+
+            if (_selectedIndex != -1)
+                _borders[_selectedIndex].Background.ClearValue(SolidColorBrush.ColorProperty);
+            else 
+                _selectedIndex = -1;
+
+        }
+
         private void Generate_Easy(object sender, RoutedEventArgs e)
         {
-            Frame.Navigate(typeof(SudokuMain), 35);
+            ClearGrid();
+            Create_Sudoku(35);
         }
 
         //private async Task SerializeValuesAsync()
@@ -274,5 +280,18 @@ namespace SudokuSolverGenerator
         //}
   
 
+    }
+
+    public class SudokuValueColour
+    {
+        private static SolidColorBrush _defaultValue = new SolidColorBrush(Colors.White);
+        private static SolidColorBrush _multipleValues = new SolidColorBrush(Colors.Gold);
+        private static SolidColorBrush _selectedValue = new SolidColorBrush(Colors.ForestGreen);
+        private static SolidColorBrush _startValue = new SolidColorBrush(Colors.DodgerBlue);
+
+        public static SolidColorBrush DefaultValue { get { return _defaultValue; } }
+        public static SolidColorBrush MultipleValues { get { return _multipleValues; } }
+        public static SolidColorBrush SelectedValue { get { return _selectedValue; } }
+        public static SolidColorBrush StartValue { get { return _startValue; } }
     }
 }
