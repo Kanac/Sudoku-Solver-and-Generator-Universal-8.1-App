@@ -58,9 +58,12 @@ namespace SudokuSolverGenerator
             // Windows.Phone.UI.Input.HardwareButtons.BackPressed event.
             // If you are using the NavigationHelper provided by some templates,
             // this event is handled for you.
-            Create_Cells();
-            Create_Boxes();
-            Create_Sudoku(30);
+            if (puzzle == null)
+            {
+                Create_Cells();
+                Create_Boxes();
+                Create_Sudoku(30);
+            }
         }
 
         private void Create_Sudoku(int numCells)
@@ -207,6 +210,7 @@ namespace SudokuSolverGenerator
             if (_values[_selectedIndex].Text.Any())
             {
                 _values[_selectedIndex].Text = "";
+                _values[_selectedIndex].Foreground = new SolidColorBrush(Colors.White);
                 _borders[_selectedIndex].Background = new SolidColorBrush(Colors.ForestGreen);
             }
                 
@@ -243,10 +247,43 @@ namespace SudokuSolverGenerator
 
         }
 
+
         private void Generate_Easy(object sender, RoutedEventArgs e)
         {
             ClearGrid();
+            Create_Sudoku(39);
+        }
+
+        private void Generate_Medium(object sender, RoutedEventArgs e)
+        {
+            ClearGrid();
             Create_Sudoku(35);
+        }
+
+        private void Generate_Hard(object sender, RoutedEventArgs e)
+        {
+            ClearGrid();
+            Create_Sudoku(30);
+        }
+
+        private void Generate_Ultra(object sender, RoutedEventArgs e)
+        {
+            ClearGrid();
+            Create_Sudoku(27);
+        }
+
+        private void Go_To_Solver(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(SudokuSolver));
+        }
+
+        private void Sudoku_Solve(object sender, RoutedEventArgs e)
+        {
+            for (int i = 0; i < puzzle.Length * puzzle.Length; i++)
+            {
+                _borders[i].Background.ClearValue(SolidColorBrush.ColorProperty);
+                _values[i].Text = puzzle.SolvedCells[0][i][0].ToString();
+            }
         }
 
         //private async Task SerializeValuesAsync()
@@ -282,16 +319,16 @@ namespace SudokuSolverGenerator
 
     }
 
-    public class SudokuValueColour
-    {
-        private static SolidColorBrush _defaultValue = new SolidColorBrush(Colors.White);
-        private static SolidColorBrush _multipleValues = new SolidColorBrush(Colors.Gold);
-        private static SolidColorBrush _selectedValue = new SolidColorBrush(Colors.ForestGreen);
-        private static SolidColorBrush _startValue = new SolidColorBrush(Colors.DodgerBlue);
+    //public class SudokuValueColour
+    //{
+    //    private static SolidColorBrush _defaultValue = new SolidColorBrush(Colors.White);
+    //    private static SolidColorBrush _multipleValues = new SolidColorBrush(Colors.Gold);
+    //    private static SolidColorBrush _selectedValue = new SolidColorBrush(Colors.ForestGreen);
+    //    private static SolidColorBrush _startValue = new SolidColorBrush(Colors.DodgerBlue);
 
-        public static SolidColorBrush DefaultValue { get { return _defaultValue; } }
-        public static SolidColorBrush MultipleValues { get { return _multipleValues; } }
-        public static SolidColorBrush SelectedValue { get { return _selectedValue; } }
-        public static SolidColorBrush StartValue { get { return _startValue; } }
-    }
+    //    public static SolidColorBrush DefaultValue { get { return _defaultValue; } }
+    //    public static SolidColorBrush MultipleValues { get { return _multipleValues; } }
+    //    public static SolidColorBrush SelectedValue { get { return _selectedValue; } }
+    //    public static SolidColorBrush StartValue { get { return _startValue; } }
+    //}
 }

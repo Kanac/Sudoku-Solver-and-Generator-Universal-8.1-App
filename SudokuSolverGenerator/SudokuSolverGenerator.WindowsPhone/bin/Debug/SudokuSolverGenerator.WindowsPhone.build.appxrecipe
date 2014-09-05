@@ -52,6 +52,9 @@
     <AppxPackagedFile Include="C:\Users\Anthony\documents\visual studio 2013\Projects\SudokuSolverGenerator\SudokuSolverGenerator\SudokuSolverGenerator.WindowsPhone\bin\Debug\SudokuMain.xbf">
       <PackagePath>SudokuMain.xbf</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Anthony\documents\visual studio 2013\Projects\SudokuSolverGenerator\SudokuSolverGenerator\SudokuSolverGenerator.WindowsPhone\bin\Debug\SudokuSolver.xbf">
+      <PackagePath>SudokuSolver.xbf</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Anthony\documents\visual studio 2013\Projects\SudokuSolverGenerator\SudokuSolverGenerator\SudokuSolverGenerator.WindowsPhone\bin\Debug\SudokuSolverGenerator.WindowsPhone.xr.xml">
       <PackagePath>SudokuSolverGenerator.WindowsPhone.xr.xml</PackagePath>
     </AppxPackagedFile>

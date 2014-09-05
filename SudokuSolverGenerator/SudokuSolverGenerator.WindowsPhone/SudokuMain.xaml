@@ -13,17 +13,24 @@
                               Label="Generate Easy Puzzle" 
                               Click="Generate_Easy"/>
                 <AppBarButton Icon="TwoBars"
-                              Label="Generate Medium Puzzle" />
+                              Label="Generate Medium Puzzle" 
+                              Click="Generate_Medium"/>
                 <AppBarButton Icon="ThreeBars"
-                              Label="Generate Hard Puzzle" />
+                              Label="Generate Hard Puzzle" 
+                              Click="Generate_Hard"/>
                 <AppBarButton Icon="FourBars"
-                              Label="Generate Ultra Puzzle" />
+                              Label="Generate Ultra Puzzle"
+                              Click="Generate_Ultra"/>
                 <AppBarButton Icon="Directions"
-                              Label="Solve " />
+                              Label="Solve " 
+                              Click="Sudoku_Solve"/>
             </CommandBar.SecondaryCommands>
             <AppBarButton Icon="Help"
                           Label="Hint" 
                           Click="Hint_Click"/>
+            <AppBarButton Icon="Forward"
+                          Label="Solver" 
+                          Click="Go_To_Solver"/>
         </CommandBar>
     </Page.BottomAppBar>
     <Grid Margin="15,15,15,15">
@@ -60,6 +67,8 @@
             <MediaElement Name="VictoryMP3"
                           Source="/Assets/VictoryMusic.mp3"
                           AutoPlay="False" />
+    
+
         </Grid>
 
         <Grid Grid.Row="1">

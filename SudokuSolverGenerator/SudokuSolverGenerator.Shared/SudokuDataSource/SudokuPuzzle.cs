@@ -12,7 +12,7 @@ namespace Sudoku
         public List<List<int>> Cells { get { return _cells;} set {_cells = value;} }
 
         private List<List<List<int>>> _solvedCells = new List<List<List<int>>>();
-        public List<List<List<int>>> SolvedCells { get { return _solvedCells; } set { _solvedCells = value; } }
+        public List<List<List<int>>> SolvedCells { get { return _solvedCells; } private set { _solvedCells = value; } }
 
         public int Length { get; set; }
         public int BoxSize { get { return (int)Math.Sqrt(Length); } }
@@ -36,12 +36,29 @@ namespace Sudoku
         }
 
 
-        private void SolveSudoku(int numSolutions)
+        public bool SolveSudoku(int numSolutions)
         {
             var workingCells = new List<List<int>>();
             CopyCells(workingCells, Cells);    //Keep the starting puzzle and working solution separate
 
+            for (int i = 0; i < Length*Length; i++)
+            {
+                foreach (var peer in FindPeers(i))
+                {
+                    if (Cells[i].Count == 1 && Cells[peer].Count == 1)
+                    {
+                        if (Cells[i][0] == Cells[peer][0])
+                            return false;
+                    }
+                }
+            }
+
             EliminateCandidates(workingCells, numSolutions);
+            
+            if (SolvedCells.Count == 1)
+                return true;
+            else
+                return false;
         }
 
 

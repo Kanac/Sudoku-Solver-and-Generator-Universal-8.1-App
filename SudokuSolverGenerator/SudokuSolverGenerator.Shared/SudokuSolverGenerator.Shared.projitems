@@ -16,5 +16,6 @@
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)SudokuDataSource\SudokuPuzzle.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)SudokuGridLogic\SudokuGridLogic.cs" />
   </ItemGroup>
 </Project>

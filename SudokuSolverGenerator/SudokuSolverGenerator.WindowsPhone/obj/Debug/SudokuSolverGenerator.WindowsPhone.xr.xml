@@ -33,6 +33,8 @@
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Viewbox">
       <RootProperty Name="Child" />
+      <RootProperty Name="HorizontalAlignment" />
+      <RootProperty Name="Margin" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.TextBlock">
       <RootProperty Name="HorizontalAlignment" />
@@ -48,5 +50,6 @@
       <RootProperty Name="AutoPlay" />
     </RootType>
     <RootType FullName="SudokuSolverGenerator.SudokuMain" />
+    <RootType FullName="SudokuSolverGenerator.SudokuSolver" />
   </Roots.RootTypes>
 </Roots>
