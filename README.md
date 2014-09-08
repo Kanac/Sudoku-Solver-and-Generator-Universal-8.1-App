@@ -5,9 +5,9 @@ Universal Windows 8.1 and Windows Phone 8.1 Sudoku App that can generate and sol
 
 Sudoku Generator:
 4 Difficulty Levels - Easy, Medium, Hard, Ultra
-Hints that allocate random cells 
-Supports multiple cell candidates for greater user experience
-Can solve current puzzle if stuck
+	Hints that allocate random cells 
+	Supports multiple cell candidates for greater user experience
+	Can solve current puzzle if stuck
 
 SUdoku Solver:
 Checks for invalid puzzles
