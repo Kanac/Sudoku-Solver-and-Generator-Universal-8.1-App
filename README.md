@@ -13,12 +13,14 @@ Supports multiple cell candidates for greater user experience
 
 Can solve current puzzle if stuck
 
-SUdoku Solver:
+Sudoku Solver:
 
 Checks for invalid puzzles
 
 Ensures at least 17 cells are allocated before attempting to solve
+
 Prevents fat fingering by blocking invalid placements
+
 Can check for 0, 1 and multiple solutions
 
 
