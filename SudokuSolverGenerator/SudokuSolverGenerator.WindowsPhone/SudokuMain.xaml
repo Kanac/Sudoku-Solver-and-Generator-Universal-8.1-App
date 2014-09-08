@@ -35,11 +35,18 @@
     </Page.BottomAppBar>
     <Grid Margin="15,15,15,15">
         <Grid.RowDefinitions>
+            <RowDefinition Height="0.5*"></RowDefinition>
             <RowDefinition Height="9*"></RowDefinition>
             <RowDefinition Height="*"></RowDefinition>
             <RowDefinition Height="0.5*"></RowDefinition>
         </Grid.RowDefinitions>
-        <Grid Name="SudokuGrid">
+        
+        <Grid>
+            <Viewbox HorizontalAlignment="Left">
+                <TextBlock Name="PageTitle"></TextBlock>
+            </Viewbox>
+        </Grid>
+        <Grid Name="SudokuGrid" Grid.Row="1">
 
             <Grid.RowDefinitions>
                 <RowDefinition Height="*"></RowDefinition>
@@ -67,11 +74,10 @@
             <MediaElement Name="VictoryMP3"
                           Source="/Assets/VictoryMusic.mp3"
                           AutoPlay="False" />
-    
-
+            
         </Grid>
 
-        <Grid Grid.Row="1">
+        <Grid Grid.Row="2">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*"></ColumnDefinition>
                 <ColumnDefinition Width="*"></ColumnDefinition>
@@ -113,7 +119,7 @@
             </Viewbox>
         </Grid>
 
-        <Grid Grid.Row="2">
+        <Grid Grid.Row="3">
             <Viewbox>
                 <TextBlock HorizontalAlignment="Center"
                            Tapped="Clear_Cell">Clear Cell</TextBlock>

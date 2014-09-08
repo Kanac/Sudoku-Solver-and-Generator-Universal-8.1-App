@@ -45,11 +45,12 @@ namespace SudokuSolverGenerator
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
 
-            if (_values == null)
+            if (puzzle == null)
             {
                 Create_Cells();
                 Create_Boxes();
-            }        
+                puzzle = new SudokuPuzzle(9);
+            }
             
         }
 
@@ -131,12 +132,19 @@ namespace SudokuSolverGenerator
 
         }
 
-        private void Value_Tapped(object sender, TappedRoutedEventArgs e)
+        private async void Value_Tapped(object sender, TappedRoutedEventArgs e)
         {
-            if (_selectedIndex == -1)
+            if (_selectedIndex == -1 )
                 return;
 
             var valueChoice = (TextBlock)sender;
+
+            foreach (var peer in puzzle.FindPeers(_selectedIndex))
+                if (valueChoice.Text == _values[peer].Text)
+                {
+                    await new MessageDialog("Contradictory Placement").ShowAsync();
+                    return;
+                }
 
             _borders[_selectedIndex].Background.ClearValue(SolidColorBrush.ColorProperty);      //Remove background highlight if any, since this cell is going to have at least 1 value, which will be highlighted instead
             _values[_selectedIndex].Text = valueChoice.Text;
@@ -152,11 +160,12 @@ namespace SudokuSolverGenerator
         {
             if (_values.Where(c => c.Text.Any()).ToList().Count < 17)
             {
-                var message = new MessageDialog("Invalid Puzzle");
-                await message.ShowAsync();
+                await new MessageDialog("Sudoku Puzzles require at least 17 cells for a unique solution").ShowAsync();
                 return;
             }
-            puzzle = new SudokuPuzzle(9);
+
+            puzzle.Cells.Clear();
+            puzzle.SolvedCells.Clear();
 
             for (int i = 0; i < puzzle.Length * puzzle.Length; i++)
             {
@@ -166,22 +175,21 @@ namespace SudokuSolverGenerator
                     puzzle.Cells.Add(new List<int>(Enumerable.Range(1, puzzle.Length)));
             }
 
-
-            if (puzzle.SolveSudoku(2))
+            if (puzzle.SolvedCells.Count == 1)
             {
                 for (int i = 0; i < puzzle.Length * puzzle.Length; i++)
                 {
                     _borders[i].Background.ClearValue(SolidColorBrush.ColorProperty);
+
                     if (!(_values[i].Text.Any()))
                         _values[i].Text = puzzle.SolvedCells[0][i][0].ToString();
                 }
 
             }
+            else if (puzzle.SolvedCells.Count > 1)
+                await new MessageDialog("Invalid Puzzle given - multiple solutions").ShowAsync();
             else
-            {
-                var message = new MessageDialog("Invalid Puzzle");
-                await message.ShowAsync();
-            }
+                await new MessageDialog("Invalid Puzzle given - no solutions ").ShowAsync();
         }
 
         private void Clear_Cell(object sender, TappedRoutedEventArgs e)

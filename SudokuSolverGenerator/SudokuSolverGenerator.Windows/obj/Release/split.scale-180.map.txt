@@ -1,0 +1,8 @@
+﻿[ResourceMetadata]
+"ResourceId"			"split.scale-180"
+"ResourceDimensions"		"scale-180"
+
+[Files]
+"C:\Users\Anthony\documents\visual studio 2013\Projects\SudokuSolverGenerator\SudokuSolverGenerator\SudokuSolverGenerator.Windows\obj\Release\split.scale-180.pri"			"resources.pri"
+"C:\Users\Anthony\documents\visual studio 2013\Projects\SudokuSolverGenerator\SudokuSolverGenerator\SudokuSolverGenerator.Windows\obj\Release\PackageLayout\Assets\Sudoku1116.scale-180.png"			"Assets\Sudoku1116.scale-180.png"
+"C:\Users\Anthony\documents\visual studio 2013\Projects\SudokuSolverGenerator\SudokuSolverGenerator\SudokuSolverGenerator.Windows\obj\Release\PackageLayout\Assets\SplashScreen.scale-180.png"			"Assets\SplashScreen.scale-180.png"

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<PriInfo>
+	<ResourceMap name="62206AnthonyC.SudokuSolverGenerator" version="1.0" primary="true">
+		<Qualifiers>
+			<Scale>240</Scale>
+		</Qualifiers>
+		<ResourceMapSubtree name="Files">
+			<NamedResource name="App.xbf" uri="ms-resource://62206AnthonyC.SudokuSolverGenerator/Files/App.xbf">
+				<Candidate type="Path">
+					<Value>App.xbf</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="SudokuMain.xbf" uri="ms-resource://62206AnthonyC.SudokuSolverGenerator/Files/SudokuMain.xbf">
+				<Candidate type="Path">
+					<Value>SudokuMain.xbf</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="SudokuSolver.xbf" uri="ms-resource://62206AnthonyC.SudokuSolverGenerator/Files/SudokuSolver.xbf">
+				<Candidate type="Path">
+					<Value>SudokuSolver.xbf</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="SudokuSolverGenerator.WindowsPhone.xr.xml" uri="ms-resource://62206AnthonyC.SudokuSolverGenerator/Files/SudokuSolverGenerator.WindowsPhone.xr.xml">
+				<Candidate type="Path">
+					<Value>SudokuSolverGenerator.WindowsPhone.xr.xml</Value>
+				</Candidate>
+			</NamedResource>
+			<ResourceMapSubtree name="Assets">
+				<NamedResource name="Square150x150Logo.png" uri="ms-resource://62206AnthonyC.SudokuSolverGenerator/Files/Assets/Square150x150Logo.png"/>
+				<NamedResource name="Sudoku106.png" uri="ms-resource://62206AnthonyC.SudokuSolverGenerator/Files/Assets/Sudoku106.png">
+					<Candidate qualifiers="Scale-240" isDefault="true" type="Path">
+						<Value>Assets\Sudoku106.scale-240.png</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="Sudoku1152.png" uri="ms-resource://62206AnthonyC.SudokuSolverGenerator/Files/Assets/Sudoku1152.png">
+					<Candidate qualifiers="Scale-240" isDefault="true" type="Path">
+						<Value>Assets\Sudoku1152.scale-240.png</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="Sudoku120.png" uri="ms-resource://62206AnthonyC.SudokuSolverGenerator/Files/Assets/Sudoku120.png">
+					<Candidate qualifiers="Scale-240" isDefault="true" type="Path">
+						<Value>Assets\Sudoku120.scale-240.png</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="Sudoku170.png" uri="ms-resource://62206AnthonyC.SudokuSolverGenerator/Files/Assets/Sudoku170.png">
+					<Candidate qualifiers="Scale-240" isDefault="true" type="Path">
+						<Value>Assets\Sudoku170.scale-240.png</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="Sudoku360.png" uri="ms-resource://62206AnthonyC.SudokuSolverGenerator/Files/Assets/Sudoku360.png">
+					<Candidate qualifiers="Scale-240" isDefault="true" type="Path">
+						<Value>Assets\Sudoku360.scale-240.png</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="Wide310x150Logo.png" uri="ms-resource://62206AnthonyC.SudokuSolverGenerator/Files/Assets/Wide310x150Logo.png"/>
+				<NamedResource name="WideLogo.png" uri="ms-resource://62206AnthonyC.SudokuSolverGenerator/Files/Assets/WideLogo.png">
+					<Candidate qualifiers="Scale-240" isDefault="true" type="Path">
+						<Value>Assets\WideLogo.scale-240.png</Value>
+					</Candidate>
+				</NamedResource>
+			</ResourceMapSubtree>
+		</ResourceMapSubtree>
+	</ResourceMap>
+</PriInfo>

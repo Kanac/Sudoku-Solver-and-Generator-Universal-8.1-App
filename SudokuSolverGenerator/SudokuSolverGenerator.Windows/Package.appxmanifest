@@ -1,38 +1,25 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Package xmlns="http://schemas.microsoft.com/appx/2010/manifest" xmlns:m2="http://schemas.microsoft.com/appx/2013/manifest">
-
-  <Identity Name="43e17ec8-8e5d-4c9f-b8be-7dca3529fac6"
-            Publisher="CN=Anthony"
-            Version="1.0.0.0" />
-
+  <Identity Name="62206AnthonyC.SudokuSolverGenerator" Publisher="CN=F30DC63F-6CBF-4542-8D92-E93F173C760F" Version="1.1.0.3" />
   <Properties>
-    <DisplayName>SudokuSolverGenerator.Windows</DisplayName>
-    <PublisherDisplayName>Anthony</PublisherDisplayName>
-    <Logo>Assets\StoreLogo.png</Logo>
+    <DisplayName>Sudoku Solver Generator</DisplayName>
+    <PublisherDisplayName>Anthony C</PublisherDisplayName>
+    <Logo>Assets\Sudoku70.png</Logo>
   </Properties>
-
   <Prerequisites>
     <OSMinVersion>6.3.0</OSMinVersion>
     <OSMaxVersionTested>6.3.0</OSMaxVersionTested>
   </Prerequisites>
-
   <Resources>
-    <Resource Language="x-generate"/>
+    <Resource Language="x-generate" />
   </Resources>
-
   <Applications>
-    <Application Id="App"
-        Executable="$targetnametoken$.exe"
-        EntryPoint="SudokuSolverGenerator.Windows.App">
-        <m2:VisualElements
-            DisplayName="SudokuSolverGenerator.Windows"
-            Square150x150Logo="Assets\Logo.png"
-            Square30x30Logo="Assets\SmallLogo.png"
-            Description="SudokuSolverGenerator.Windows"
-            ForegroundText="light"
-            BackgroundColor="#464646">
-            <m2:SplashScreen Image="Assets\SplashScreen.png" />
-        </m2:VisualElements>
+    <Application Id="App" Executable="$targetnametoken$.exe" EntryPoint="SudokuSolverGenerator.Windows.App">
+      <m2:VisualElements DisplayName="Sudoku Solver Generator" Square150x150Logo="Assets\Logo.png" Square30x30Logo="Assets\SmallLogo.png" Description="SudokuSolverGenerator.Windows" ForegroundText="light" BackgroundColor="#464646">
+        <m2:DefaultTile Square310x310Logo="Assets\Square310x310Logo.png" Wide310x150Logo="Assets\Wide310x150Logo.png" Square70x70Logo="Assets\Sudoku98.png">
+        </m2:DefaultTile>
+        <m2:SplashScreen Image="Assets\Sudoku1116.png" BackgroundColor="green" />
+      </m2:VisualElements>
     </Application>
   </Applications>
   <Capabilities>

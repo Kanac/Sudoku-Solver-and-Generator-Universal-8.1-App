@@ -1,0 +1,119 @@
+﻿<Page x:Class="SudokuSolverGenerator.SudokuSolver"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:local="using:SudokuSolverGenerator"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      mc:Ignorable="d"
+      Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Page.BottomAppBar>
+        <CommandBar>
+
+            <AppBarButton x:ConnectionId='1' Icon="Back"
+                          Label="Generator"
+                                                  />
+            <AppBarButton x:ConnectionId='2' Icon="Clear"
+                          Label="Clear Grid" 
+                                            />
+        </CommandBar>
+    </Page.BottomAppBar>
+    <Grid Margin="15,15,15,15">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.5*"></RowDefinition>
+            <RowDefinition Height="9*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+        
+        <Grid>
+            <Viewbox HorizontalAlignment="Left">
+                <TextBlock>Sudoku Solver - Stuck on a newspaper puzzle?</TextBlock>
+            </Viewbox>
+        </Grid>
+        <Grid Name="SudokuSolverGrid" Grid.Row="1">
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+
+        </Grid>
+        <Grid Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+
+            <Viewbox>
+                <TextBlock x:ConnectionId='13'                      >1</TextBlock>
+            </Viewbox>
+            <Viewbox Grid.Column="1">
+                <TextBlock x:ConnectionId='12'                      >2</TextBlock>
+            </Viewbox>
+            <Viewbox Grid.Column="2">
+                <TextBlock x:ConnectionId='11'                      >3</TextBlock>
+            </Viewbox>
+            <Viewbox Grid.Column="3">
+                <TextBlock x:ConnectionId='10'                      >4</TextBlock>
+            </Viewbox>
+            <Viewbox Grid.Column="4">
+                <TextBlock x:ConnectionId='9'                      >5</TextBlock>
+            </Viewbox>
+            <Viewbox Grid.Column="5">
+                <TextBlock x:ConnectionId='8'                      >6</TextBlock>
+            </Viewbox>
+            <Viewbox Grid.Column="6">
+                <TextBlock x:ConnectionId='7'                      >7</TextBlock>
+            </Viewbox>
+            <Viewbox Grid.Column="7">
+                <TextBlock x:ConnectionId='6'                      >8</TextBlock>
+            </Viewbox>
+            <Viewbox Grid.Column="8">
+                <TextBlock x:ConnectionId='5'                      >9</TextBlock>
+            </Viewbox>
+        </Grid>
+
+        <Grid Grid.Row="3">
+
+            <Viewbox HorizontalAlignment="Center"
+                     Margin="0,0,300,0">
+                <TextBlock x:ConnectionId='4'                    >Clear Cell</TextBlock>
+            </Viewbox>
+            <Viewbox HorizontalAlignment="Center"
+                     Grid.Column="1"
+                     Margin="300,0,0,0">
+                <TextBlock x:ConnectionId='3'                      >Solve</TextBlock>
+            </Viewbox>
+        </Grid>
+
+    </Grid>
+
+</Page>
+

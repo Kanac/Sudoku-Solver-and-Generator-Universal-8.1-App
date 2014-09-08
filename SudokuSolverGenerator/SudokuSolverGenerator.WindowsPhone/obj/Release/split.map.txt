@@ -1,0 +1,16 @@
+﻿[ResourceMetadata]
+"ResourceDimensions"		"scale-240"
+"ResourceDimensions"		"language-en-us"
+
+[Files]
+"C:\Users\Anthony\documents\visual studio 2013\Projects\SudokuSolverGenerator\SudokuSolverGenerator\SudokuSolverGenerator.WindowsPhone\obj\Release\split.pri"			"resources.pri"
+"C:\Users\Anthony\documents\visual studio 2013\Projects\SudokuSolverGenerator\SudokuSolverGenerator\SudokuSolverGenerator.WindowsPhone\obj\Release\PackageLayout\SudokuSolverGenerator.WindowsPhone.xr.xml"			"SudokuSolverGenerator.WindowsPhone.xr.xml"
+"C:\Users\Anthony\documents\visual studio 2013\Projects\SudokuSolverGenerator\SudokuSolverGenerator\SudokuSolverGenerator.WindowsPhone\obj\Release\PackageLayout\SudokuSolver.xbf"			"SudokuSolver.xbf"
+"C:\Users\Anthony\documents\visual studio 2013\Projects\SudokuSolverGenerator\SudokuSolverGenerator\SudokuSolverGenerator.WindowsPhone\obj\Release\PackageLayout\SudokuMain.xbf"			"SudokuMain.xbf"
+"C:\Users\Anthony\documents\visual studio 2013\Projects\SudokuSolverGenerator\SudokuSolverGenerator\SudokuSolverGenerator.WindowsPhone\obj\Release\PackageLayout\Assets\WideLogo.scale-240.png"			"Assets\WideLogo.scale-240.png"
+"C:\Users\Anthony\documents\visual studio 2013\Projects\SudokuSolverGenerator\SudokuSolverGenerator\SudokuSolverGenerator.WindowsPhone\obj\Release\PackageLayout\Assets\Sudoku360.scale-240.png"			"Assets\Sudoku360.scale-240.png"
+"C:\Users\Anthony\documents\visual studio 2013\Projects\SudokuSolverGenerator\SudokuSolverGenerator\SudokuSolverGenerator.WindowsPhone\obj\Release\PackageLayout\Assets\Sudoku170.scale-240.png"			"Assets\Sudoku170.scale-240.png"
+"C:\Users\Anthony\documents\visual studio 2013\Projects\SudokuSolverGenerator\SudokuSolverGenerator\SudokuSolverGenerator.WindowsPhone\obj\Release\PackageLayout\Assets\Sudoku120.scale-240.png"			"Assets\Sudoku120.scale-240.png"
+"C:\Users\Anthony\documents\visual studio 2013\Projects\SudokuSolverGenerator\SudokuSolverGenerator\SudokuSolverGenerator.WindowsPhone\obj\Release\PackageLayout\Assets\Sudoku1152.scale-240.png"			"Assets\Sudoku1152.scale-240.png"
+"C:\Users\Anthony\documents\visual studio 2013\Projects\SudokuSolverGenerator\SudokuSolverGenerator\SudokuSolverGenerator.WindowsPhone\obj\Release\PackageLayout\Assets\Sudoku106.scale-240.png"			"Assets\Sudoku106.scale-240.png"
+"C:\Users\Anthony\documents\visual studio 2013\Projects\SudokuSolverGenerator\SudokuSolverGenerator\SudokuSolverGenerator.WindowsPhone\obj\Release\PackageLayout\App.xbf"			"App.xbf"

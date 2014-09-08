@@ -11,6 +11,7 @@ using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.Storage;
 using Windows.UI;
+using Windows.UI.Popups;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -26,16 +27,14 @@ namespace SudokuSolverGenerator
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
-    
+
     public sealed partial class SudokuMain : Page
     {
         private int _selectedIndex = -1;
         private Random rand = new Random();
+        private SudokuPuzzle puzzle;
         private List<Border> _borders;
         private List<TextBlock> _values;
-        private SudokuPuzzle puzzle;
-
-        
 
         public SudokuMain()
         {
@@ -58,12 +57,15 @@ namespace SudokuSolverGenerator
             // Windows.Phone.UI.Input.HardwareButtons.BackPressed event.
             // If you are using the NavigationHelper provided by some templates,
             // this event is handled for you.
-            if (puzzle == null)
+
+            if (puzzle == null)     //Don't remake puzzle, if renavigating from solver
             {
                 Create_Cells();
                 Create_Boxes();
-                Create_Sudoku(30);
+                Create_Sudoku((int)NumCells.Easy);
+                PageTitle.Text = "Sudoku Generator - Easy Difficulty";
             }
+
         }
 
         private void Create_Sudoku(int numCells)
@@ -71,7 +73,7 @@ namespace SudokuSolverGenerator
             puzzle = new SudokuPuzzle(9);
             puzzle.GenerateSudoku(numCells);
 
-            for (var startingCell = 0; startingCell < 81; startingCell++ )
+            for (var startingCell = 0; startingCell < 81; startingCell++)
             {
                 if (puzzle.Cells[startingCell].Count == 1)
                 {
@@ -93,7 +95,7 @@ namespace SudokuSolverGenerator
                 for (int col = 0; col < 9; col++)
                 {
 
-                    var cell = new TextBlock ();
+                    var cell = new TextBlock();
                     Grid.SetRow(cell, row);
                     Grid.SetColumn(cell, col);
 
@@ -138,14 +140,14 @@ namespace SudokuSolverGenerator
 
         private void Cell_Tapped(object sender, TappedRoutedEventArgs e)
         {
-            var border = (Border)sender;        
-            var newIndex = Grid.GetRow(border) * 9 + Grid.GetColumn(border); 
+            var border = (Border)sender;
+            var newIndex = Grid.GetRow(border) * 9 + Grid.GetColumn(border);
 
             if (puzzle.Cells[newIndex].Count == 1)      //Don't making starting cells clickable
                 return;
 
             //Previous selection algorithim
-            if (_selectedIndex != -1 )          
+            if (_selectedIndex != -1)
             {
                 if (!(_values[_selectedIndex].Text.Any()))
                     _borders[_selectedIndex].Background.ClearValue(SolidColorBrush.ColorProperty);
@@ -168,10 +170,10 @@ namespace SudokuSolverGenerator
 
         private void Value_Tapped(object sender, TappedRoutedEventArgs e)
         {
-            if (_selectedIndex == -1)
-                return;
-
             var valueChoice = (TextBlock)sender;
+
+            if (_selectedIndex == -1 || (_values[_selectedIndex].Text.Contains(valueChoice.Text)))
+                return;
 
             _borders[_selectedIndex].Background.ClearValue(SolidColorBrush.ColorProperty);      //Remove background highlight if any, since this cell is going to have at least 1 value, which will be highlighted instead
 
@@ -179,7 +181,7 @@ namespace SudokuSolverGenerator
             {
                 _values[_selectedIndex].Text = valueChoice.Text;
             }
-            else if (!(_values[_selectedIndex].Text.Contains(valueChoice.Text)))         //Algorithm to manage values in a cell
+            else        //Algorithm to manage values in a cell
             {
                 var cellValues = _values[_selectedIndex].Text + valueChoice.Text;
                 var charValues = cellValues.ToCharArray();
@@ -188,19 +190,30 @@ namespace SudokuSolverGenerator
 
                 foreach (var a in charValues)
                     _values[_selectedIndex].Text += a;
-
             }
 
             _values[_selectedIndex].Foreground = new SolidColorBrush(Colors.ForestGreen);
 
+            CheckIfSolved();
+        }
+
+        private async void CheckIfSolved()
+        {
             if (_values.Select(c => c.Text).SequenceEqual(puzzle.SolvedCells[0].Select(c => c[0].ToString())))
             {
                 VictoryMP3.Play();
+                await new MessageDialog("Congraulations! Try the next difficulty!").ShowAsync();
+                if (puzzle.Cells.Count > (int)NumCells.Ultra)
+                {
+                    var puzzleDifficulties = Enum.GetValues(typeof(NumCells));
+                    int nextDifficulty = (int)puzzleDifficulties.GetValue(Array.IndexOf(puzzleDifficulties, puzzle.Cells.Count) + 1);
+                    GenerateNumCells(nextDifficulty);
+                }
+                else
+                    GenerateNumCells((int)NumCells.Ultra);
+
             }
-
-
         }
-
         private void Clear_Cell(object sender, TappedRoutedEventArgs e)
         {
 
@@ -213,8 +226,8 @@ namespace SudokuSolverGenerator
                 _values[_selectedIndex].Foreground = new SolidColorBrush(Colors.White);
                 _borders[_selectedIndex].Background = new SolidColorBrush(Colors.ForestGreen);
             }
-                
-                
+
+
         }
 
         private void Hint_Click(object sender, RoutedEventArgs e)
@@ -241,35 +254,63 @@ namespace SudokuSolverGenerator
             }
 
             if (_selectedIndex != -1)
+            {
                 _borders[_selectedIndex].Background.ClearValue(SolidColorBrush.ColorProperty);
-            else 
                 _selectedIndex = -1;
+            }
 
         }
 
+        private enum NumCells
+        {
+            Easy = 39,
+            Medium = 35,
+            Hard = 31,
+            Ultra = 27
+        }
 
-        private void Generate_Easy(object sender, RoutedEventArgs e)
+        private void GenerateNumCells(int numCells)
         {
             ClearGrid();
-            Create_Sudoku(39);
+            PageTitle.Text = "Sudoku Generator - " + Enum.GetName(typeof(NumCells), numCells) + " Difficulty";
+
+            var viewBox = new Viewbox();
+            SudokuGrid.Children.Add(viewBox);
+            Grid.SetRow(viewBox, 3);
+            Grid.SetColumn(viewBox, 1);
+            Grid.SetRowSpan(viewBox, 3);
+            Grid.SetColumnSpan(viewBox, 7);
+            viewBox.Child = new TextBlock { Text = "Generating Puzzle..." };
+
+            var timer = new DispatcherTimer { Interval = TimeSpan.FromSeconds(0.01) };          //Executes on seperate thread, allowing ui to update
+            timer.Tick += (sender, args) => { timer.Stop(); Create_Sudoku(numCells); };
+            timer.Start();
+
+            timer.Tick += (sender, args) => { timer.Stop(); SudokuGrid.Children.Remove(viewBox); };
+            timer.Start();
+
+        }
+
+  
+        private void Generate_Easy(object sender, RoutedEventArgs e)
+        {
+            GenerateNumCells((int)NumCells.Easy);
         }
 
         private void Generate_Medium(object sender, RoutedEventArgs e)
         {
-            ClearGrid();
-            Create_Sudoku(35);
+            GenerateNumCells((int)NumCells.Medium);
         }
 
         private void Generate_Hard(object sender, RoutedEventArgs e)
         {
-            ClearGrid();
-            Create_Sudoku(30);
+            GenerateNumCells((int)NumCells.Hard);
+
         }
 
         private void Generate_Ultra(object sender, RoutedEventArgs e)
         {
-            ClearGrid();
-            Create_Sudoku(27);
+            GenerateNumCells((int)NumCells.Ultra);
         }
 
         private void Go_To_Solver(object sender, RoutedEventArgs e)
@@ -286,49 +327,6 @@ namespace SudokuSolverGenerator
             }
         }
 
-        //private async Task SerializeValuesAsync()
-        //{
-        //    var serializer = new DataContractJsonSerializer(typeof(SudokuPuzzle));
-
-        //    using (var stream = await ApplicationData.Current.LocalFolder.OpenStreamForWriteAsync(VALUESFILE, CreationCollisionOption.ReplaceExisting))
-        //    {
-        //        serializer.WriteObject(stream, puzzle);
-        //    }
-
-        //}
-
-        //private async Task<bool> DeserializeValuesAsync()
-        //{
-        //    var serializer = new DataContractJsonSerializer(typeof(List<string>));
-
-        //    try
-        //    {
-        //        using (var stream = await ApplicationData.Current.LocalFolder.OpenStreamForReadAsync(VALUESFILE))
-        //        {
-        //            puzzle = (SudokuPuzzle)serializer.ReadObject(stream);
-        //        }
-
-        //        return true;
-        //    }
-        //    catch       //If no saved file, get ready to generate new pzuzle
-        //    {
-        //        return false;
-        //    }
-        //}
-  
-
     }
-
-    //public class SudokuValueColour
-    //{
-    //    private static SolidColorBrush _defaultValue = new SolidColorBrush(Colors.White);
-    //    private static SolidColorBrush _multipleValues = new SolidColorBrush(Colors.Gold);
-    //    private static SolidColorBrush _selectedValue = new SolidColorBrush(Colors.ForestGreen);
-    //    private static SolidColorBrush _startValue = new SolidColorBrush(Colors.DodgerBlue);
-
-    //    public static SolidColorBrush DefaultValue { get { return _defaultValue; } }
-    //    public static SolidColorBrush MultipleValues { get { return _multipleValues; } }
-    //    public static SolidColorBrush SelectedValue { get { return _selectedValue; } }
-    //    public static SolidColorBrush StartValue { get { return _startValue; } }
-    //}
 }
+

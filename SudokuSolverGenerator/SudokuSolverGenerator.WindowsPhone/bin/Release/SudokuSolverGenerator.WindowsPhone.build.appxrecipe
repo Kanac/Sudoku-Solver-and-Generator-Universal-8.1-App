@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Machine>ANTHONY</Machine>
+    <WindowsUser>Anthony</WindowsUser>
+    <TargetPlatformIdentifier>WindowsPhoneApp</TargetPlatformIdentifier>
+    <SolutionConfiguration>Release|AnyCPU</SolutionConfiguration>
+    <PackageArchitecture>neutral</PackageArchitecture>
+    <PackageIdentityName>69bfad38-51bb-40d6-bd3a-0f2b645ef718</PackageIdentityName>
+    <IntermediateOutputPath>C:\Users\Anthony\documents\visual studio 2013\Projects\SudokuSolverGenerator\SudokuSolverGenerator\SudokuSolverGenerator.WindowsPhone\obj\Release\</IntermediateOutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <AppXManifest Include="C:\Users\Anthony\documents\visual studio 2013\Projects\SudokuSolverGenerator\SudokuSolverGenerator\SudokuSolverGenerator.WindowsPhone\bin\Release\AppxManifest.xml">
+      <PackagePath>AppxManifest.xml</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppXManifest>
+  </ItemGroup>
+  <ItemGroup>
+    <AppxPackagedFile Include="C:\Users\Anthony\documents\visual studio 2013\Projects\SudokuSolverGenerator\SudokuSolverGenerator\SudokuSolverGenerator.WindowsPhone\bin\Release\SudokuSolverGenerator.WindowsPhone.exe">
+      <PackagePath>SudokuSolverGenerator.WindowsPhone.exe</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Anthony\documents\visual studio 2013\Projects\SudokuSolverGenerator\SudokuSolverGenerator\SudokuSolverGenerator.WindowsPhone\Assets\Square150x150Logo.scale-100.png">
+      <PackagePath>Assets\Square150x150Logo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Anthony\documents\visual studio 2013\Projects\SudokuSolverGenerator\SudokuSolverGenerator\SudokuSolverGenerator.WindowsPhone\Assets\Sudoku106.scale-240.png">
+      <PackagePath>Assets\Sudoku106.scale-240.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Anthony\documents\visual studio 2013\Projects\SudokuSolverGenerator\SudokuSolverGenerator\SudokuSolverGenerator.WindowsPhone\Assets\Sudoku1152.scale-240.png">
+      <PackagePath>Assets\Sudoku1152.scale-240.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Anthony\documents\visual studio 2013\Projects\SudokuSolverGenerator\SudokuSolverGenerator\SudokuSolverGenerator.WindowsPhone\Assets\Sudoku120.scale-240.png">
+      <PackagePath>Assets\Sudoku120.scale-240.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Anthony\documents\visual studio 2013\Projects\SudokuSolverGenerator\SudokuSolverGenerator\SudokuSolverGenerator.WindowsPhone\Assets\Sudoku170.scale-240.png">
+      <PackagePath>Assets\Sudoku170.scale-240.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Anthony\documents\visual studio 2013\Projects\SudokuSolverGenerator\SudokuSolverGenerator\SudokuSolverGenerator.WindowsPhone\Assets\Sudoku360.scale-240.png">
+      <PackagePath>Assets\Sudoku360.scale-240.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Anthony\documents\visual studio 2013\Projects\SudokuSolverGenerator\SudokuSolverGenerator\SudokuSolverGenerator.WindowsPhone\Assets\Wide310x150Logo.scale-100.png">
+      <PackagePath>Assets\Wide310x150Logo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Anthony\documents\visual studio 2013\Projects\SudokuSolverGenerator\SudokuSolverGenerator\SudokuSolverGenerator.WindowsPhone\Assets\WideLogo.scale-100.png">
+      <PackagePath>Assets\WideLogo.scale-100.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Anthony\documents\visual studio 2013\Projects\SudokuSolverGenerator\SudokuSolverGenerator\SudokuSolverGenerator.WindowsPhone\Assets\WideLogo.scale-240.png">
+      <PackagePath>Assets\WideLogo.scale-240.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Anthony\documents\visual studio 2013\Projects\SudokuSolverGenerator\SudokuSolverGenerator\SudokuSolverGenerator.WindowsPhone\bin\Release\App.xbf">
+      <PackagePath>App.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Anthony\documents\visual studio 2013\Projects\SudokuSolverGenerator\SudokuSolverGenerator\SudokuSolverGenerator.WindowsPhone\bin\Release\SudokuMain.xbf">
+      <PackagePath>SudokuMain.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Anthony\documents\visual studio 2013\Projects\SudokuSolverGenerator\SudokuSolverGenerator\SudokuSolverGenerator.WindowsPhone\bin\Release\SudokuSolver.xbf">
+      <PackagePath>SudokuSolver.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Anthony\documents\visual studio 2013\Projects\SudokuSolverGenerator\SudokuSolverGenerator\SudokuSolverGenerator.WindowsPhone\bin\Release\SudokuSolverGenerator.WindowsPhone.xr.xml">
+      <PackagePath>SudokuSolverGenerator.WindowsPhone.xr.xml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Anthony\documents\visual studio 2013\Projects\SudokuSolverGenerator\SudokuSolverGenerator\SudokuSolverGenerator.WindowsPhone\bin\Release\resources.pri">
+      <PackagePath>resources.pri</PackagePath>
+    </AppxPackagedFile>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+</Project>

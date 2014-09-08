@@ -30,3 +30,13 @@ c:\users\anthony\documents\visual studio 2013\Projects\SudokuSolverGenerator\Sud
 c:\users\anthony\documents\visual studio 2013\Projects\SudokuSolverGenerator\SudokuSolverGenerator\SudokuSolverGenerator.Windows\obj\Debug\qualifiers.txt.intermediate
 c:\users\anthony\documents\visual studio 2013\Projects\SudokuSolverGenerator\SudokuSolverGenerator\SudokuSolverGenerator.Windows\obj\Debug\MultipleQualifiersPerDimensionFound.txt
 c:\users\anthony\documents\visual studio 2013\Projects\SudokuSolverGenerator\SudokuSolverGenerator\SudokuSolverGenerator.Windows\obj\Debug\ProjectArchitectures.txt
+C:\Users\Anthony\documents\visual studio 2013\Projects\SudokuSolverGenerator\SudokuSolverGenerator\SudokuSolverGenerator.Windows\bin\Debug\SudokuMain.xbf
+C:\Users\Anthony\documents\visual studio 2013\Projects\SudokuSolverGenerator\SudokuSolverGenerator\SudokuSolverGenerator.Windows\bin\Debug\SudokuSolver.xbf
+C:\Users\Anthony\documents\visual studio 2013\Projects\SudokuSolverGenerator\SudokuSolverGenerator\SudokuSolverGenerator.Windows\obj\Debug\SudokuMain.g.i.cs
+C:\Users\Anthony\documents\visual studio 2013\Projects\SudokuSolverGenerator\SudokuSolverGenerator\SudokuSolverGenerator.Windows\obj\Debug\SudokuMain.g.cs
+C:\Users\Anthony\documents\visual studio 2013\Projects\SudokuSolverGenerator\SudokuSolverGenerator\SudokuSolverGenerator.Windows\obj\Debug\SudokuSolver.g.i.cs
+C:\Users\Anthony\documents\visual studio 2013\Projects\SudokuSolverGenerator\SudokuSolverGenerator\SudokuSolverGenerator.Windows\obj\Debug\SudokuSolver.g.cs
+C:\Users\Anthony\documents\visual studio 2013\Projects\SudokuSolverGenerator\SudokuSolverGenerator\SudokuSolverGenerator.Windows\obj\Debug\SudokuMain.xaml
+C:\Users\Anthony\documents\visual studio 2013\Projects\SudokuSolverGenerator\SudokuSolverGenerator\SudokuSolverGenerator.Windows\obj\Debug\SudokuSolver.xaml
+C:\Users\Anthony\documents\visual studio 2013\Projects\SudokuSolverGenerator\SudokuSolverGenerator\SudokuSolverGenerator.Windows\obj\Debug\SudokuMain.xbf
+C:\Users\Anthony\documents\visual studio 2013\Projects\SudokuSolverGenerator\SudokuSolverGenerator\SudokuSolverGenerator.Windows\obj\Debug\SudokuSolver.xbf

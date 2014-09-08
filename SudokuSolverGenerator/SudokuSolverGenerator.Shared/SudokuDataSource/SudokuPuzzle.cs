@@ -23,6 +23,16 @@ namespace Sudoku
             this.Length = length;
             
         }
+        
+        
+        public void SolveSudoku(int numSolutions)
+        {
+            var workingCells = new List<List<int>>();
+            CopyCells(workingCells, Cells);    //Keep the starting puzzle and working solution separate
+
+            EliminateCandidates(workingCells, numSolutions);
+            
+        }
 
         private bool CheckIfSolved(List<List<int>> cells)
         {
@@ -34,33 +44,6 @@ namespace Sudoku
 
             return true;
         }
-
-
-        public bool SolveSudoku(int numSolutions)
-        {
-            var workingCells = new List<List<int>>();
-            CopyCells(workingCells, Cells);    //Keep the starting puzzle and working solution separate
-
-            for (int i = 0; i < Length*Length; i++)
-            {
-                foreach (var peer in FindPeers(i))
-                {
-                    if (Cells[i].Count == 1 && Cells[peer].Count == 1)
-                    {
-                        if (Cells[i][0] == Cells[peer][0])
-                            return false;
-                    }
-                }
-            }
-
-            EliminateCandidates(workingCells, numSolutions);
-            
-            if (SolvedCells.Count == 1)
-                return true;
-            else
-                return false;
-        }
-
 
         private void EliminateCandidates(List<List<int>> cells, int numSolutions)
         {
@@ -122,7 +105,7 @@ namespace Sudoku
             }
         }
 
-        private List<int> FindPeers(int cell)  //For a cell, find its related row, column and box peers. (Values will never change throughout)
+        public List<int> FindPeers(int cell)  //For a cell, find its related row, column and box peers. (Values will never change throughout)
         {
             var peers = new List<int>();
 

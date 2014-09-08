@@ -1,0 +1,10 @@
+﻿[ResourceMetadata]
+"ResourceId"			"split.scale-140"
+"ResourceDimensions"		"scale-140"
+
+[Files]
+"C:\Users\Anthony\documents\visual studio 2013\Projects\SudokuSolverGenerator\SudokuSolverGenerator\SudokuSolverGenerator.Windows\obj\Release\split.scale-140.pri"			"resources.pri"
+"C:\Users\Anthony\documents\visual studio 2013\Projects\SudokuSolverGenerator\SudokuSolverGenerator\SudokuSolverGenerator.Windows\obj\Release\PackageLayout\Assets\Sudoku98.scale-140.png"			"Assets\Sudoku98.scale-140.png"
+"C:\Users\Anthony\documents\visual studio 2013\Projects\SudokuSolverGenerator\SudokuSolverGenerator\SudokuSolverGenerator.Windows\obj\Release\PackageLayout\Assets\Sudoku70.scale-140.png"			"Assets\Sudoku70.scale-140.png"
+"C:\Users\Anthony\documents\visual studio 2013\Projects\SudokuSolverGenerator\SudokuSolverGenerator\SudokuSolverGenerator.Windows\obj\Release\PackageLayout\Assets\StoreLogo.scale-140.png"			"Assets\StoreLogo.scale-140.png"
+"C:\Users\Anthony\documents\visual studio 2013\Projects\SudokuSolverGenerator\SudokuSolverGenerator\SudokuSolverGenerator.Windows\obj\Release\PackageLayout\Assets\Square70x70Logo.scale-140.png"			"Assets\Square70x70Logo.scale-140.png"

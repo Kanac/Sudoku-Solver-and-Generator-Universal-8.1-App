@@ -1,41 +1,26 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Package xmlns="http://schemas.microsoft.com/appx/2010/manifest" xmlns:m2="http://schemas.microsoft.com/appx/2013/manifest" xmlns:m3="http://schemas.microsoft.com/appx/2014/manifest" xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest">
-
-  <Identity Name="33072f00-ced7-4129-9116-aceb00e27ac9"
-            Publisher="CN=Anthony"
-            Version="1.0.0.0" />
-
-  <mp:PhoneIdentity PhoneProductId="33072f00-ced7-4129-9116-aceb00e27ac9" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
-
+  <Identity Name="62206AnthonyC.SudokuSolverGenerator" Publisher="CN=F30DC63F-6CBF-4542-8D92-E93F173C760F" Version="1.1.0.1" />
+  <mp:PhoneIdentity PhoneProductId="69bfad38-51bb-40d6-bd3a-0f2b645ef718" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
   <Properties>
-    <DisplayName>SudokuSolverGenerator.WindowsPhone</DisplayName>
-    <PublisherDisplayName>Anthony</PublisherDisplayName>
-    <Logo>Assets\StoreLogo.png</Logo>
+    <DisplayName>Sudoku Solver Generator</DisplayName>
+    <PublisherDisplayName>Anthony C</PublisherDisplayName>
+    <Logo>Assets\Sudoku120.png</Logo>
   </Properties>
-
   <Prerequisites>
     <OSMinVersion>6.3.1</OSMinVersion>
     <OSMaxVersionTested>6.3.1</OSMaxVersionTested>
   </Prerequisites>
-  
   <Resources>
-    <Resource Language="x-generate"/>
+    <Resource Language="x-generate" />
   </Resources>
-
   <Applications>
-    <Application Id="App"
-        Executable="$targetnametoken$.exe"
-        EntryPoint="SudokuSolverGenerator.WindowsPhone.App">
-        <m3:VisualElements
-            DisplayName="SudokuSolverGenerator.WindowsPhone"
-            Square150x150Logo="Assets\Logo.png"
-            Square44x44Logo="Assets\SmallLogo.png"
-            Description="SudokuSolverGenerator.WindowsPhone"
-            ForegroundText="light"
-            BackgroundColor="transparent">
-            <m3:DefaultTile Wide310x150Logo="Assets\WideLogo.png" Square71x71Logo="Assets\Square71x71Logo.png"/>
-            <m3:SplashScreen Image="Assets\SplashScreen.png"/>
-        </m3:VisualElements>
+    <Application Id="App" Executable="$targetnametoken$.exe" EntryPoint="SudokuSolverGenerator.WindowsPhone.App">
+      <m3:VisualElements DisplayName="Sudoku Solver Generator" Square150x150Logo="Assets\Square150x150Logo.png" Square44x44Logo="Assets\Sudoku106.png" Description="SudokuSolverGenerator.WindowsPhone" ForegroundText="light" BackgroundColor="transparent">
+        <m3:DefaultTile Wide310x150Logo="Assets\Wide310x150Logo.png" Square71x71Logo="Assets\Sudoku170.png">
+        </m3:DefaultTile>
+        <m3:SplashScreen Image="Assets\Sudoku1152.png" />
+      </m3:VisualElements>
     </Application>
   </Applications>
   <Capabilities>

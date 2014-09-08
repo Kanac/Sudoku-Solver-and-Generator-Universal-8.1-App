@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<PriInfo>
+	<ResourceMap name="62206AnthonyC.SudokuSolverGenerator" version="1.0" primary="true">
+		<Qualifiers>
+			<Scale>100</Scale>
+		</Qualifiers>
+		<ResourceMapSubtree name="Files">
+			<NamedResource name="App.xbf" uri="ms-resource://62206AnthonyC.SudokuSolverGenerator/Files/App.xbf">
+				<Candidate type="Path">
+					<Value>App.xbf</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="MainPage.xbf" uri="ms-resource://62206AnthonyC.SudokuSolverGenerator/Files/MainPage.xbf">
+				<Candidate type="Path">
+					<Value>MainPage.xbf</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="SudokuMain.xbf" uri="ms-resource://62206AnthonyC.SudokuSolverGenerator/Files/SudokuMain.xbf">
+				<Candidate type="Path">
+					<Value>SudokuMain.xbf</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="SudokuSolver.xbf" uri="ms-resource://62206AnthonyC.SudokuSolverGenerator/Files/SudokuSolver.xbf">
+				<Candidate type="Path">
+					<Value>SudokuSolver.xbf</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="SudokuSolverGenerator.Windows.xr.xml" uri="ms-resource://62206AnthonyC.SudokuSolverGenerator/Files/SudokuSolverGenerator.Windows.xr.xml">
+				<Candidate type="Path">
+					<Value>SudokuSolverGenerator.Windows.xr.xml</Value>
+				</Candidate>
+			</NamedResource>
+			<ResourceMapSubtree name="Assets">
+				<NamedResource name="Logo.png" uri="ms-resource://62206AnthonyC.SudokuSolverGenerator/Files/Assets/Logo.png">
+					<Candidate qualifiers="Scale-100" isDefault="true" type="Path">
+						<Value>Assets\Logo.scale-100.png</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="SmallLogo.png" uri="ms-resource://62206AnthonyC.SudokuSolverGenerator/Files/Assets/SmallLogo.png">
+					<Candidate qualifiers="Scale-100" isDefault="true" type="Path">
+						<Value>Assets\SmallLogo.scale-100.png</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="SplashScreen.png" uri="ms-resource://62206AnthonyC.SudokuSolverGenerator/Files/Assets/SplashScreen.png"/>
+				<NamedResource name="Square310x310Logo.png" uri="ms-resource://62206AnthonyC.SudokuSolverGenerator/Files/Assets/Square310x310Logo.png">
+					<Candidate qualifiers="Scale-100" isDefault="true" type="Path">
+						<Value>Assets\Square310x310Logo.scale-100.png</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="Square70x70Logo.png" uri="ms-resource://62206AnthonyC.SudokuSolverGenerator/Files/Assets/Square70x70Logo.png"/>
+				<NamedResource name="StoreLogo.png" uri="ms-resource://62206AnthonyC.SudokuSolverGenerator/Files/Assets/StoreLogo.png"/>
+				<NamedResource name="Sudoku1116.png" uri="ms-resource://62206AnthonyC.SudokuSolverGenerator/Files/Assets/Sudoku1116.png"/>
+				<NamedResource name="Sudoku70.png" uri="ms-resource://62206AnthonyC.SudokuSolverGenerator/Files/Assets/Sudoku70.png">
+					<Candidate type="Path">
+						<Value>Assets\Sudoku70.png</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="Sudoku98.png" uri="ms-resource://62206AnthonyC.SudokuSolverGenerator/Files/Assets/Sudoku98.png"/>
+				<NamedResource name="VictoryMusic.mp3" uri="ms-resource://62206AnthonyC.SudokuSolverGenerator/Files/Assets/VictoryMusic.mp3">
+					<Candidate type="Path">
+						<Value>Assets\VictoryMusic.mp3</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="Wide310x150Logo.png" uri="ms-resource://62206AnthonyC.SudokuSolverGenerator/Files/Assets/Wide310x150Logo.png">
+					<Candidate qualifiers="Scale-100" isDefault="true" type="Path">
+						<Value>Assets\Wide310x150Logo.scale-100.png</Value>
+					</Candidate>
+				</NamedResource>
+			</ResourceMapSubtree>
+		</ResourceMapSubtree>
+	</ResourceMap>
+</PriInfo>

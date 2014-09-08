@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Machine>ANTHONY</Machine>
+    <WindowsUser>Anthony</WindowsUser>
+    <TargetPlatformIdentifier>Windows</TargetPlatformIdentifier>
+    <SolutionConfiguration>Debug|AnyCPU</SolutionConfiguration>
+    <PackageArchitecture>neutral</PackageArchitecture>
+    <PackageIdentityName>62206AnthonyC.SudokuSolverGenerator</PackageIdentityName>
+    <IntermediateOutputPath>C:\Users\Anthony\documents\visual studio 2013\Projects\SudokuSolverGenerator\SudokuSolverGenerator\SudokuSolverGenerator.Windows\obj\Debug\</IntermediateOutputPath>
+    <RegisteredManifestChecksum>4563548E1C35F572FDE4AF1C7CA961C37FFD3EE538158549458E34BBF177F64B</RegisteredManifestChecksum>
+    <RegisteredPackageMoniker>62206AnthonyC.SudokuSolverGenerator_1.1.0.3_neutral__f525sr33j540e</RegisteredPackageMoniker>
+    <RegisteredUserModeAppID>62206AnthonyC.SudokuSolverGenerator_f525sr33j540e!App</RegisteredUserModeAppID>
+    <RegisteredPackageID>62206AnthonyC.SudokuSolverGenerator</RegisteredPackageID>
+    <RegisteredPackagePublisher>CN=F30DC63F-6CBF-4542-8D92-E93F173C760F</RegisteredPackagePublisher>
+    <RegisteredVersion>1.1.0.3</RegisteredVersion>
+    <JitOptimizationSuppressed>True</JitOptimizationSuppressed>
+  </PropertyGroup>
+  <ItemGroup>
+    <AppXManifest Include="C:\Users\Anthony\documents\visual studio 2013\Projects\SudokuSolverGenerator\SudokuSolverGenerator\SudokuSolverGenerator.Windows\bin\Debug\AppxManifest.xml">
+      <PackagePath>AppxManifest.xml</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2014-09-07T20:19:17.508</Modified>
+    </AppXManifest>
+  </ItemGroup>
+  <ItemGroup>
+    <AppxPackagedFile Include="C:\Users\Anthony\documents\visual studio 2013\Projects\SudokuSolverGenerator\SudokuSolverGenerator\SudokuSolverGenerator.Windows\bin\Debug\SudokuSolverGenerator.Windows.exe">
+      <PackagePath>SudokuSolverGenerator.Windows.exe</PackagePath>
+      <Modified>2014-09-07T20:19:17.156</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Anthony\documents\visual studio 2013\Projects\SudokuSolverGenerator\SudokuSolverGenerator\SudokuSolverGenerator.Windows\Assets\Logo.scale-100.png">
+      <PackagePath>Assets\Logo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2014-09-07T18:30:23.930</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Anthony\documents\visual studio 2013\Projects\SudokuSolverGenerator\SudokuSolverGenerator\SudokuSolverGenerator.Windows\Assets\SmallLogo.scale-100.png">
+      <PackagePath>Assets\SmallLogo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2014-09-07T18:34:48.429</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Anthony\documents\visual studio 2013\Projects\SudokuSolverGenerator\SudokuSolverGenerator\SudokuSolverGenerator.Windows\Assets\SplashScreen.scale-180.png">
+      <PackagePath>Assets\SplashScreen.scale-180.png</PackagePath>
+      <Modified>2014-09-07T18:35:52.826</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Anthony\documents\visual studio 2013\Projects\SudokuSolverGenerator\SudokuSolverGenerator\SudokuSolverGenerator.Windows\Assets\Square310x310Logo.scale-100.png">
+      <PackagePath>Assets\Square310x310Logo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2014-09-07T18:34:20.027</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Anthony\documents\visual studio 2013\Projects\SudokuSolverGenerator\SudokuSolverGenerator\SudokuSolverGenerator.Windows\Assets\StoreLogo.scale-140.png">
+      <PackagePath>Assets\StoreLogo.scale-140.png</PackagePath>
+      <Modified>2014-09-07T18:35:16.062</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Anthony\documents\visual studio 2013\Projects\SudokuSolverGenerator\SudokuSolverGenerator\SudokuSolverGenerator.Windows\Assets\Sudoku1116.scale-180.png">
+      <PackagePath>Assets\Sudoku1116.scale-180.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2014-09-07T18:35:52.826</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Anthony\documents\visual studio 2013\Projects\SudokuSolverGenerator\SudokuSolverGenerator\SudokuSolverGenerator.Windows\Assets\Sudoku70.scale-140.png">
+      <PackagePath>Assets\Sudoku70.scale-140.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2014-09-07T18:35:16.062</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Anthony\documents\visual studio 2013\Projects\SudokuSolverGenerator\SudokuSolverGenerator\SudokuSolverGenerator.Windows\Assets\Sudoku98.scale-140.png">
+      <PackagePath>Assets\Sudoku98.scale-140.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2014-09-07T18:33:41.856</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Anthony\documents\visual studio 2013\Projects\SudokuSolverGenerator\SudokuSolverGenerator\SudokuSolverGenerator.Windows\Assets\Wide310x150Logo.scale-100.png">
+      <PackagePath>Assets\Wide310x150Logo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2014-09-07T18:29:44.288</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Anthony\documents\visual studio 2013\Projects\SudokuSolverGenerator\SudokuSolverGenerator\SudokuSolverGenerator.Windows\Assets\VictoryMusic.mp3">
+      <PackagePath>Assets\VictoryMusic.mp3</PackagePath>
+      <Modified>2014-08-31T09:09:25.952</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Anthony\documents\visual studio 2013\Projects\SudokuSolverGenerator\SudokuSolverGenerator\SudokuSolverGenerator.Windows\bin\Debug\App.xbf">
+      <PackagePath>App.xbf</PackagePath>
+      <Modified>2014-09-01T12:55:04.367</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Anthony\documents\visual studio 2013\Projects\SudokuSolverGenerator\SudokuSolverGenerator\SudokuSolverGenerator.Windows\bin\Debug\MainPage.xbf">
+      <PackagePath>MainPage.xbf</PackagePath>
+      <Modified>2014-09-01T12:55:04.370</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Anthony\documents\visual studio 2013\Projects\SudokuSolverGenerator\SudokuSolverGenerator\SudokuSolverGenerator.Windows\bin\Debug\SudokuMain.xbf">
+      <PackagePath>SudokuMain.xbf</PackagePath>
+      <Modified>2014-09-07T20:19:16.916</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Anthony\documents\visual studio 2013\Projects\SudokuSolverGenerator\SudokuSolverGenerator\SudokuSolverGenerator.Windows\bin\Debug\SudokuSolver.xbf">
+      <PackagePath>SudokuSolver.xbf</PackagePath>
+      <Modified>2014-09-07T20:19:16.916</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Anthony\documents\visual studio 2013\Projects\SudokuSolverGenerator\SudokuSolverGenerator\SudokuSolverGenerator.Windows\bin\Debug\SudokuSolverGenerator.Windows.xr.xml">
+      <PackagePath>SudokuSolverGenerator.Windows.xr.xml</PackagePath>
+      <Modified>2014-09-07T17:08:50.303</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Anthony\documents\visual studio 2013\Projects\SudokuSolverGenerator\SudokuSolverGenerator\SudokuSolverGenerator.Windows\bin\Debug\resources.pri">
+      <PackagePath>resources.pri</PackagePath>
+      <Modified>2014-09-07T20:19:17.286</Modified>
+    </AppxPackagedFile>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,17 @@
+﻿[ResourceMetadata]
+"ResourceDimensions"		"scale-100"
+"ResourceDimensions"		"language-en-us"
+
+[Files]
+"C:\Users\Anthony\documents\visual studio 2013\Projects\SudokuSolverGenerator\SudokuSolverGenerator\SudokuSolverGenerator.Windows\obj\Release\split.pri"			"resources.pri"
+"C:\Users\Anthony\documents\visual studio 2013\Projects\SudokuSolverGenerator\SudokuSolverGenerator\SudokuSolverGenerator.Windows\obj\Release\PackageLayout\SudokuSolverGenerator.Windows.xr.xml"			"SudokuSolverGenerator.Windows.xr.xml"
+"C:\Users\Anthony\documents\visual studio 2013\Projects\SudokuSolverGenerator\SudokuSolverGenerator\SudokuSolverGenerator.Windows\obj\Release\PackageLayout\SudokuSolver.xbf"			"SudokuSolver.xbf"
+"C:\Users\Anthony\documents\visual studio 2013\Projects\SudokuSolverGenerator\SudokuSolverGenerator\SudokuSolverGenerator.Windows\obj\Release\PackageLayout\SudokuMain.xbf"			"SudokuMain.xbf"
+"C:\Users\Anthony\documents\visual studio 2013\Projects\SudokuSolverGenerator\SudokuSolverGenerator\SudokuSolverGenerator.Windows\obj\Release\PackageLayout\MainPage.xbf"			"MainPage.xbf"
+"C:\Users\Anthony\documents\visual studio 2013\Projects\SudokuSolverGenerator\SudokuSolverGenerator\SudokuSolverGenerator.Windows\obj\Release\PackageLayout\Assets\Wide310x150Logo.scale-100.png"			"Assets\Wide310x150Logo.scale-100.png"
+"C:\Users\Anthony\documents\visual studio 2013\Projects\SudokuSolverGenerator\SudokuSolverGenerator\SudokuSolverGenerator.Windows\obj\Release\PackageLayout\Assets\VictoryMusic.mp3"			"Assets\VictoryMusic.mp3"
+"C:\Users\Anthony\documents\visual studio 2013\Projects\SudokuSolverGenerator\SudokuSolverGenerator\SudokuSolverGenerator.Windows\obj\Release\PackageLayout\Assets\Sudoku70.png"			"Assets\Sudoku70.png"
+"C:\Users\Anthony\documents\visual studio 2013\Projects\SudokuSolverGenerator\SudokuSolverGenerator\SudokuSolverGenerator.Windows\obj\Release\PackageLayout\Assets\Square310x310Logo.scale-100.png"			"Assets\Square310x310Logo.scale-100.png"
+"C:\Users\Anthony\documents\visual studio 2013\Projects\SudokuSolverGenerator\SudokuSolverGenerator\SudokuSolverGenerator.Windows\obj\Release\PackageLayout\Assets\SmallLogo.scale-100.png"			"Assets\SmallLogo.scale-100.png"
+"C:\Users\Anthony\documents\visual studio 2013\Projects\SudokuSolverGenerator\SudokuSolverGenerator\SudokuSolverGenerator.Windows\obj\Release\PackageLayout\Assets\Logo.scale-100.png"			"Assets\Logo.scale-100.png"
+"C:\Users\Anthony\documents\visual studio 2013\Projects\SudokuSolverGenerator\SudokuSolverGenerator\SudokuSolverGenerator.Windows\obj\Release\PackageLayout\App.xbf"			"App.xbf"

@@ -1,8 +1,15 @@
 Assets\Logo.scale-100.png
 Assets\SmallLogo.scale-100.png
-Assets\SplashScreen.scale-100.png
-Assets\StoreLogo.scale-100.png
+Assets\SplashScreen.scale-180.png
+Assets\Square310x310Logo.scale-100.png
+Assets\StoreLogo.scale-140.png
+Assets\Sudoku1116.scale-180.png
+Assets\Sudoku70.scale-140.png
+Assets\Sudoku98.scale-140.png
 Assets\VictoryMusic.mp3
+Assets\Wide310x150Logo.scale-100.png
 App.xbf
 MainPage.xbf
+SudokuMain.xbf
+SudokuSolver.xbf
 SudokuSolverGenerator.Windows.xr.xml
