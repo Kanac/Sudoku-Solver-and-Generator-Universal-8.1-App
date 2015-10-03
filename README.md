@@ -1,4 +1,4 @@
-Sudoku-Solver-and-Generator-Universal-8.1-App
+Sudoku Solver and Generator Universal 8.1 App
 =============================================
 
 Universal Windows 8.1 and Windows Phone 8.1 Sudoku App that can generate and solve puzzles rather than current sudoku apps out there that use pre-existing puzzles.
@@ -23,5 +23,8 @@ Prevents fat fingering by blocking invalid placements
 
 Can check for 0, 1 and multiple solutions
 
+Check the link below for all the details:
+
+http://windowsphone.com/s?appid=c7a0cb94-23d1-4dc2-a1a5-99543d566732
 
 
