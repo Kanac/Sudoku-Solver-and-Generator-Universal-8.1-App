@@ -1,7 +1,7 @@
 Sudoku Solver and Generator Universal 8.1 App
 =============================================
 
-Universal Windows 8.1 and Windows Phone 8.1 Sudoku App that can generate and solve puzzles rather than current sudoku apps out there that use pre-existing puzzles.
+Universal Windows 8.1 and Windows Phone 8.1 Sudoku App that can generate and solve puzzles rather than current sudoku apps out there that use pre-existing puzzles. Also, the code is not hard coded to 9x9 rows and columns but rather supports an arbitrary number of rows and columns (as long as they are equal). 
 
 Sudoku Generator:
 
