@@ -25,6 +25,5 @@ Can check for 0, 1 and multiple solutions
 
 Check the link below for all the details:
 
-http://windowsphone.com/s?appid=c7a0cb94-23d1-4dc2-a1a5-99543d566732
-
+https://www.microsoft.com/en-us/store/p/sudoku-solver-generator/9wzdncrdqrn6
 
